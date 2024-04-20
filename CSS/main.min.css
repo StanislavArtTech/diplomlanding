@@ -1,1 +1,27 @@
-*{font-family:"Montserrat",sans-serif;margin:0;padding:0;font-weight:normal;box-sizing:border-box}/*# sourceMappingURL=main.min.css.map */
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    box-sizing: border-box;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    background: #2c3878;
+    border: .06rem solid #3c3c3c;
+    color: #fff;
+}
+
+.button:visited {
+    color: inherit;
+}
+
+/*# sourceMappingURL=main.min.css.map */
