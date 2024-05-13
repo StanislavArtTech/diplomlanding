@@ -34,7 +34,7 @@
 /* Шрифты */
 
 /* main styles */
-*>.wrapper {
+* {
     font-family: "Montserrat", sans-serif;
     margin: 0;
     padding: 0;
@@ -42,32 +42,408 @@
     box-sizing: border-box;
 }
 
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    max-width: 1290px;
+    margin: 100px auto;
+}
+
+.button {
+    background-color: rgb(44, 56, 120);
+    padding: 14px 32px 14px 32px;
+    color: #fff;
+}
+
+.button:visited {
+    color: #fff;
+}
+
 a {
     text-decoration: none;
 }
+
 a:visited {
     color: inherit;
 }
+
+h2 {
+    color: rgb(51, 51, 51);
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 140%;
+    margin: 20px 0 50px 0;
+    width: 680px;
+}
+
+p {
+    color: rgb(156, 156, 156);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 160%;
+    width: 630px;
+}
+
+.background_img {
+    width: 1440px;
+}
+
 /* header */
 
 header {
     width: 100%;
-    height: 80px;
+    height: 100px;
     position: fixed;
     z-index: 10;
     background-color: #fff;
+    top: 0;
+    margin: 0;
 }
 
 .header_container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: 100px;
+    margin: 0 100px 0 100px;
 }
 
-ul {
+.header_list {
     list-style-type: none;
     display: flex;
-
+    align-items: center;
 }
+
+li {
+    margin: 0 15px 0 15px;
+}
+
+.header_logo {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 170%;
+    letter-spacing: 0rem;
+}
+
+.header_nav ul li strong {
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.header_nav ul li {
+    color: rgb(51, 51, 51);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+/* hero */
+
+.hero {
+    width: 100%;
+}
+
+.title {
+    color: rgb(51, 51, 51);
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 140%;
+    max-width: 540px;
+    margin-bottom: 70px;
+}
+
+.title,
+.smaller {
+    font-size: 52px;
+}
+
+.title::after {
+    position: absolute;
+    content: '';
+    top: 40px;
+    right: 130px;
+    width: 48vw;
+    height: 2px;
+    background: black;
+}
+
+.hero_conditions {
+    position: absolute;
+    z-index: 5;
+    background: rgb(44, 56, 120);
+    width: 252px;
+    max-width: 252px;
+    right: 14vw;
+    top: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.conditions_element {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 30px;
+    align-items: center;
+}
+
+.conditions_element span strong {
+    font-size: 48px;
+    font-weight: 400;
+    display: block;
+    padding: 0px 0px 5px 0px;
+    width: 200px;
+    text-align: center;
+}
+
+.conditions_element span {
+    color: rgb(255, 255, 255);
+    display: block;
+    font-size: 16px;
+    width: 200px;
+    text-align: center;
+}
+
+sup {
+    font-size: 30px;
+}
+
+.hero img {
+    width: 1200px;
+    height: 600px;
+    position: relative;
+    left: 40px;
+}
+
+/* about */
+
+.headline {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.headline::after {
+    position: absolute;
+    transform: translate(10px, 12px);
+    content: '';
+    width: 48vw;
+    height: 2px;
+    background: black;
+}
+
+.about_conditions {
+    display: grid;
+    background: rgb(44, 56, 120);
+    height: 460px;
+    width: 1280px;
+    grid-template-columns: 1fr 1fr;
+    padding: 35px 100px 50px 50px;
+    margin: 100px auto 80px auto;
+}
+
+.about_conditions .about_conditions_item {
+    padding: 0px 50px 25px 50px;
+}
+
+.about_conditions_item {
+    display: flex;
+    align-items: center;
+}
+
+.about_conditions_item p {
+    color: white;
+    width: 300px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%;
+    padding-left: 20px;
+}
+
+.about .about_paragraf_left {
+    position: relative;
+    left: 650px;
+}
+
+.about .button {
+    position: relative;
+    left: 650px;
+    top: 20px;
+}
+
+/* коллаж */
+.collages {
+    margin: auto;
+    width: 1200px;
+    height: 620px;
+    display: grid;
+    position: relative;
+    gap: 10px;
+}
+
+.collage1 {
+    grid-column: 1/3;
+    grid-row: 1;
+}
+
+.collage2 {
+    grid-row: 2;
+    grid-column: 1;
+    width: 290px;
+    height: 300x;
+}
+
+.collage3 {
+    grid-row: 2;
+    grid-column: 2;
+    width: 290px;
+    height: 300x;
+}
+
+.collage4 {
+    grid-column: 3;
+    grid-row: 1/3;
+}
+
+.collage5 {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.collage6 {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+.collages p {
+    position: absolute;
+    color: #fff;
+    width: 250px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.collage1 p {
+    top: 230px;
+    width: 400px;
+}
+
+.collage5 p {
+    top: 230px;
+}
+
+.collage2 p,
+.collage3 p,
+.collage4 p,
+.collage6 p {
+    bottom: 20px;
+}
+
+/* подробно */
+
+.info_list {
+    width: 600px;
+    color: rgb(156, 156, 156);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 160%;
+    display: inline-block;
+}
+
+.info img {
+    display: inline;
+    position: relative;
+    top: 40px;
+}
+
+.info .button,
+.download {
+    display: block;
+    width: 240px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 150%;
+    margin-top: 50px;
+}
+
+/* footer */
+
+.footer {
+    height: 470px;
+    background: rgb(44, 56, 120);
+}
+
+.footer_form_info {
+    display: flex;
+    justify-content: space-around;
+    margin: 0px 120px 100px 120px;
+    align-items: baseline;
+}
+
+.footer form {
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+    padding-top: 70px;
+}
+
+.submit {
+    width: 250px;
+    height: 50px;
+    background-color: #fff;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.input {
+    font-family: "Montserrat";
+    width: 300px;
+    height: 50px;
+    margin: 10px 20px 20px 0;
+    background: rgb(44, 56, 120);
+    border-color: #fff;
+}
+
+.input::placeholder {
+    color: #fff;
+    font-family: 'Montserrat';
+    padding-left: 20px;
+}
+
+.footer span {
+    display: inline-block;
+    width: 560px;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.logo_footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo_footer .logo {
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.footer_b {
+    font-size: 32px;
+    font-weight: 500;
+}
+
 /*# sourceMappingURL=stiles.min.css.map */
