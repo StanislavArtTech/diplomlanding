@@ -169,7 +169,7 @@ li {
 
 .location {
     left: 977px;
-    top: 300px;
+    top: 200px;
     height: 200px;
     justify-content: center;
 }
@@ -590,10 +590,10 @@ sup {
         width: 350px;
     }
 
-    .background_img {
+    /* .background_img {
         width: 100vw;
         height: 27.25rem;
-    }
+    } */
 
     .collages {
         width: 600px;
