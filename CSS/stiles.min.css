@@ -23,6 +23,8 @@
     background-color: rgb(44, 56, 120);
     padding: 14px 32px 14px 32px;
     color: #fff;
+    display: inline-block;
+    width: auto;
 }
 
 .button:visited {
@@ -44,6 +46,7 @@ h2 {
     line-height: 140%;
     margin: 20px 0 50px 0;
     width: 680px;
+    padding-left: 2vw;
 }
 
 p {
@@ -52,11 +55,15 @@ p {
     font-weight: 400;
     line-height: 160%;
     width: 630px;
+    padding-left: 2vw;
 }
 
 .background_img {
-    background-image: url("IMG Fonts/img/Options/image 3.png");
+    overflow: hidden;
+    width: 100%;
 }
+
+
 
 /* header */
 
@@ -65,7 +72,7 @@ p {
 }
 
 header {
-    width: 100vw;
+    width: 100%;
     height: 100px;
     position: fixed;
     z-index: 10;
@@ -124,6 +131,7 @@ li {
     line-height: 140%;
     max-width: 540px;
     margin-bottom: 70px;
+    padding-left: 2vw;
 }
 
 .title,
@@ -223,12 +231,17 @@ sup {
     position: relative;
 }
 
+.nav_mobail_v {
+    display: none;
+}
+
 /* about */
 
 .headline {
     font-size: 16px;
     font-weight: 500;
     line-height: 150%;
+    padding-left: 2vw;
 }
 
 .headline::after {
@@ -244,7 +257,6 @@ sup {
     display: grid;
     background: rgb(44, 56, 120);
     height: 460px;
-    width: 1280px;
     grid-template-columns: 1fr 1fr;
     padding: 35px 100px 50px 50px;
     margin: 100px auto 80px auto;
@@ -270,7 +282,7 @@ sup {
 
 .about .about_paragraf_left {
     position: relative;
-    left: 650px;
+    left: 625px;
 }
 
 .about .button {
@@ -358,6 +370,7 @@ sup {
     font-weight: 400;
     line-height: 160%;
     display: inline-block;
+    padding-left: 2vw;
 }
 
 .info img {
@@ -373,7 +386,7 @@ sup {
     font-size: 14px;
     font-weight: 500;
     line-height: 150%;
-    margin-top: 50px;
+    margin: 50px 0 0 2vw;
 }
 
 /* footer */
@@ -485,20 +498,21 @@ sup {
 /*# sourceMappingURL=stiles.min.css.map */
 
 
-@media screen and (max-width:1439px) and (min-width:835px) {
+@media screen and (max-width:834px) and (min-width:531px) {
     .wrapper {
-        max-width: 1440px;
-        min-width: 835px;
+        max-width: 834px;
+        min-width: 376px;
     }
 
     .title {
         font-size: 2.5rem;
         margin-bottom: 150px;
-        width: 26.25rem;
+        width: 26.4rem;
     }
 
     .title::after {
         width: 27vw;
+        right: 10%;
     }
 
     .container {
@@ -577,7 +591,6 @@ sup {
     }
 
     .background_img {
-        background-image: url("IMG Fonts/img/Options/image 3.png");
         width: 100vw;
         height: 27.25rem;
     }
@@ -648,10 +661,10 @@ sup {
     }
 }
 
-@media screen and (max-width:834px) and (min-width:375px) {
-    .wrapper {
-        max-width: 834px;
-        min-width: 375px;
+@media screen and (min-width:375px) and (max-width:530px){
+
+    header {
+       width: 100vw;
     }
 
     .header_container {
@@ -666,7 +679,7 @@ sup {
     .title {
         font-size: 1.5rem;
         margin-bottom: 50px;
-        width: 21rem;
+        width: 100%;
     }
 
     .title::after {
@@ -675,10 +688,11 @@ sup {
 
     .container {
         width: 90%;
+        margin: 100px 10px 10px 10px; 
     }
 
     .header_container {
-        width: 100vw;
+        width: 90%;
         margin: 0;
         justify-content: space-around;
     }
@@ -709,11 +723,41 @@ sup {
 
     .hero_conditions {
         flex-direction: row;
-        width: 21.56rem;
+        width: 90%;
         max-width: none;
         top: 130px;
-        left: 4.85vw;
+        left: 2.45vw;
         align-items: baseline;
+    }
+
+    .location_2 {
+        height: 68px;
+        left: 252px;
+        width: 110px;
+        top: 151px;
+    }
+
+    .location {
+        height: auto;
+        left: 252px;
+        width: 110px;
+        top: 117px;
+    }
+
+    .options {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .option {
+        margin-bottom: 15px;
+    }
+
+    .option .button {
+        width: 90%;
+        text-align: center;
     }
 
     sup {
@@ -722,6 +766,7 @@ sup {
 
     .conditions_element span strong {
         font-size: 1.25rem;
+        width: auto;
     }
 
     .conditions_element {
@@ -731,16 +776,24 @@ sup {
 
     .hero span {
         font-size: 0.63rem;
+        width: auto;
     }
 
     .hero img {
-        width: 21.56rem;
+        width: 99%;
         height: 12.5rem;
     }
 
+    .nav_mobail_v {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
     h2 {
         font-size: 1.25rem;
-        width: 21.63rem;
+        width: auto;
     }
 
     p {
@@ -751,11 +804,15 @@ sup {
         font-size: 0.75rem;
     }
 
+    .button {
+        font-size: 0.88rem;
+    }
+
     .about_conditions {
         display: flex;
         flex-direction: column;
         height: auto;
-        width: 21.56rem;
+        width: 100%;
         align-items: center;
         padding: 35px 0;
         margin: 45px 0 60px 0;
@@ -776,6 +833,78 @@ sup {
 
     .background_img {
         background-image: url("IMG Fonts/img/Options/image 3.png");
-        width: 100vw;
+        width: 100%;
+    }
+
+    .collages {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        align-items: center
+    }
+    
+    .collage1 {
+        overflow:hidden;
+        width: 290px;
+    }
+
+    .collage1 p {
+        width: 250px;
+    }
+
+    .collage2 p {
+        top: 540px;
+    }
+
+    .collage3 p {
+        bottom: 1280px;
+    }
+
+    .collage4 p {
+        bottom: 650px;
+    }
+
+    .collage5 p {
+       top: 1800px;
+    }
+
+    .info_list {
+        width: 90vw;
+    }
+
+    .footer {
+        height: auto;
+    }
+
+    .footer_form_info {
+        flex-direction: column;
+        margin: 0 10px 140px 10px;
+        width: 90%;
+    }
+
+    .footer span {
+        font-size: 1.25rem;
+        width: 90%;
+        padding-top: 30px;
+    }
+
+    .logo_footer {
+        flex-direction: column;
+        align-items: start;
+        width: 90%;
+    }
+
+    .logo_footer {
+        padding: 14px 32px;
+    }
+
+    .logo_footer .logo {
+        font-size: 1.5rem;
+    }
+
+    .footer_b {
+        padding: 15px 0 15px 0;
+        font-size: 1.5rem;
     }
 }
